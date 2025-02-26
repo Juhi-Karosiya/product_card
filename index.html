@@ -83,9 +83,9 @@
             <h4 class="sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
             <h2 class="sub-heading">₹ 250/-</h2>
             <div class="quantity">
-                <img src="./img/minus.png" class="minus" height="30px" alt=""> 
-                <span class="number">0</span>
-                <img src="./img/add.png" class="plus" height="30px" alt=""> 
+                <img src="./img/minus.png" class="minus" height="30px" onclick="decrease()" alt=""> 
+                <span class="number" id="quantity-num">0</span>
+                <img src="./img/add.png" class="plus" height="30px" onclick="increase()" alt=""> 
             </div>
            <button class="btn">Add to Cart</button>
         </div>
@@ -95,9 +95,9 @@
             <h4 class="sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
             <h2 class="sub-heading">₹ 250/-</h2>
             <div class="quantity">
-                <img src="./img/minus.png" class="minus" height="30px" alt=""> 
-                <span class="number">0</span>
-                <img src="./img/add.png" class="plus" height="30px" alt=""> 
+                <img src="./img/minus.png" class="minus" height="30px" onclick="decrease()" alt=""> 
+                <span class="number" id="quantity-num">0</span>
+                <img src="./img/add.png" class="plus" height="30px" onclick="increase()" alt=""> 
             </div>
            <button class="btn">Add to Cart</button>
         </div>
@@ -107,9 +107,9 @@
             <h4 class="sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
             <h2 class="sub-heading">₹ 250/-</h2>
             <div class="quantity">
-                <img src="./img/minus.png" class="minus" height="30px" alt=""> 
-                <span class="number">0</span>
-                <img src="./img/add.png" class="plus" height="30px" alt=""> 
+                <img src="./img/minus.png" class="minus" height="30px" onclick="decrease()" alt=""> 
+                <span class="number" id="quantity-num">0</span>
+                <img src="./img/add.png" class="plus" height="30px" onclick="increase()" alt=""> 
             </div>
            <button class="btn">Add to Cart</button>
         </div>
@@ -119,14 +119,39 @@
             <h4 class="sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
             <h2 class="sub-heading">₹ 250/-</h2>
             <div class="quantity">
-                <img src="./img/minus.png" class="minus" height="30px" alt=""> 
-                <span class="number">0</span>
-                <img src="./img/add.png" class="plus" height="30px" alt=""> 
+                <img src="./img/minus.png" class="minus" height="30px" onclick="decrease()" alt=""> 
+                <span class="number" id="quantity-num">0</span>
+                <img src="./img/add.png" class="plus" height="30px" onclick="increase()" alt=""> 
             </div>
            <button class="btn">Add to Cart</button>
             
         </div>
     </div>
-   
+   <script>
+
+    const quantityElement = document.getElementById("quantity-num");
+
+    function increase(){
+        let quantity = parseInt(quantityElement.innerText);
+        if (quantity < 5){ 
+            quantityElement.innerText = ++quantity;
+        }
+        else{
+            alert("You can't add more than 5 times!")
+        }
+    }
+
+    function decrease(){
+        let quantity = parseInt(quantityElement.innerText);
+        if (quantity > 1){
+            quantityElement.innerText = --quantity;
+        }
+        else{
+            alert("You can't select items in negative!")
+        }
+
+    }
+
+   </script>
 </body>
 </html>
