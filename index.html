@@ -100,7 +100,7 @@
                 <span class="number" id="quantity-num">0</span>
                 <img src="./img/add.png" class="plus" height="30px" onclick="increase()" alt=""> 
             </div>
-           <button class="btn">Add to Cart</button>
+           <button class="btn" onclick="added()">Add to Cart</button>
         </div>
         <div class="container">
             <img src="./img/orange-juice (1).png" class="orange" alt="">
@@ -112,7 +112,7 @@
                 <span class="number" id="quantity-num">0</span>
                 <img src="./img/add.png" class="plus" height="30px" onclick="increase()" alt=""> 
             </div>
-           <button class="btn">Add to Cart</button>
+           <button class="btn" onclick="added()">Add to Cart</button>
         </div>
         <div class="container">
             <img src="./img/peach.png" class="orange" alt="">
@@ -124,7 +124,7 @@
                 <span class="number" id="quantity-num">0</span>
                 <img src="./img/add.png" class="plus" height="30px" onclick="increase()" alt=""> 
             </div>
-           <button class="btn">Add to Cart</button>
+           <button class="btn" onclick="added()">Add to Cart</button>
         </div>
         <div class="container">
             <img src="./img/orange-juice.png" class="orange" alt="">
@@ -136,7 +136,7 @@
                 <span class="number" id="quantity-num">0</span>
                 <img src="./img/add.png" class="plus" height="30px" onclick="increase()" alt=""> 
             </div>
-           <button class="btn">Add to Cart</button>
+           <button class="btn" onclick="added()">Add to Cart</button>
             
         </div>
     </div>
@@ -163,6 +163,10 @@
             alert("You can't select items in negative!")
         }
 
+    }
+
+    function added(){
+        alert("Order is sucessfully added 🎉✨!")
     }
 
    </script>
